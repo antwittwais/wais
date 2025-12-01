@@ -314,9 +314,23 @@ export default function Home() {
 
         <form
           className="mt-6 grid gap-4 max-w-lg text-sm"
-          action="https://formspree.io/f/manreago"
+          action="https://formsubmit.co/waisceo@gmail.com"
           method="POST"
         >
+          {/* disable captcha & set email subject */}
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="New WAIS Automation Audit Lead"
+          />
+          {/* where to redirect after success (your live site) */}
+          <input
+            type="hidden"
+            name="_next"
+            value="https://wais-roan.vercel.app/#book"
+          />
+
           <input
             className="rounded-lg border border-white/30 bg-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Your name"
@@ -342,12 +356,6 @@ export default function Home() {
             name="message"
             required
           />
-          {/* Extra metadata for your inbox */}
-          <input
-            type="hidden"
-            name="_subject"
-            value="New WAIS Automation Audit Lead"
-          />
           <button
             type="submit"
             className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium hover:bg-blue-500"
@@ -355,6 +363,7 @@ export default function Home() {
             Send
           </button>
         </form>
+
       </motion.section>
 
 
