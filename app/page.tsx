@@ -45,9 +45,13 @@ export default function Home() {
       >
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-xl bg-white/10 grid place-items-center text-sm font-semibold">
-              W
-            </div>
+          <img 
+  src="/logo.png" 
+  alt="WAIS Logo" 
+  className="h-8 w-auto opacity-90"
+/>
+
+
             <div className="leading-tight">
               <div className="font-semibold tracking-wide">WAIS</div>
               <div className="text-xs opacity-80">
