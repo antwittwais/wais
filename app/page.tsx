@@ -296,7 +296,8 @@ export default function Home() {
       </motion.section>
 
       {/* CONTACT / BOOKING */}
-      <motion.section
+            {/* CONTACT / BOOKING */}
+            <motion.section
         id="book"
         className="mx-auto max-w-6xl px-4 py-16 md:py-20"
         variants={fadeInUp}
@@ -311,24 +312,41 @@ export default function Home() {
           can automate immediately. No obligation.
         </p>
 
-        <form className="mt-6 grid gap-4 max-w-lg text-sm">
+        <form
+          className="mt-6 grid gap-4 max-w-lg text-sm"
+          action="https://formspree.io/f/manreago"
+          method="POST"
+        >
           <input
             className="rounded-lg border border-white/30 bg-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Your name"
+            name="name"
+            required
           />
           <input
             className="rounded-lg border border-white/30 bg-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Email"
             type="email"
+            name="email"
+            required
           />
           <input
             className="rounded-lg border border-white/30 bg-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Business / website (optional)"
+            name="business"
           />
           <textarea
             className="rounded-lg border border-white/30 bg-white/10 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="What would you love to stop doing manually?"
             rows={4}
+            name="message"
+            required
+          />
+          {/* Extra metadata for your inbox */}
+          <input
+            type="hidden"
+            name="_subject"
+            value="New WAIS Automation Audit Lead"
           />
           <button
             type="submit"
@@ -338,6 +356,7 @@ export default function Home() {
           </button>
         </form>
       </motion.section>
+
 
       {/* FOOTER */}
       <footer id="contact" className="border-t border-white/10">
